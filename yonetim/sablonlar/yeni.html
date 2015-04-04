@@ -1,0 +1,234 @@
+
+<!doctype html>
+<!--[if lt IE 7 ]> 
+<html class="no-js ie6 oldie " lang="en-US"> 
+<![endif]-->
+<!--[if IE 7 ]>    
+<html class="no-js ie7 oldie " lang="en-US"> 
+<![endif]-->
+<!--[if IE 8 ]>    
+<html class="no-js ie8 oldie " lang="en-US"> 
+<![endif]-->
+<!--[if IE 9 ]>    
+<html class="no-js ie9 " lang="en-US"> 
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js " lang="en-US">
+<!--<![endif]-->
+
+
+<head>
+
+
+
+<title>Bloqpress.com</title>
+<link rel="stylesheet" href="http://listverse.wpengine.netdna-cdn.com/wp-content/themes/listverse2013/style.css?v=1.1.1" media="all" />
+<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+<link href="/static/css/bootstrap-theme.min.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="/static/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="/static/css/yeni/deneme.css">
+    <!-- Custom styles for this template -->
+<link href="/static/css/theme.css" rel="stylesheet">
+<link href="/static/css/blog.css" rel="stylesheet">
+      
+
+</head>
+
+
+
+
+<body class="home blog" id="top" style="background: url(http://bloqpress.com/media/tmp/yeni_arkaplan.jpg) no-repeat fixed center;">
+     
+        <center>
+         <script type="text/javascript">
+        google_ad_client = "ca-pub-1772847216840979";
+        google_ad_slot = "8644425842";
+        google_ad_width = 980;
+        google_ad_height = 60;
+    </script>
+    <!-- Reklam banner -->
+    <script type="text/javascript"
+    src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+    </script></center><br><br><br>
+    
+     <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Bloqpress.com</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Ana Sayfa <span class="badge">{{pageCounter.sayi}}</span></a></li>
+            <li><a href="/about">Hakkında <span class="badge">{{hakkinda.sayi}}</span></a></li>
+            <li><a href="/contact">İletişim <span class="badge">{{iletisim.sayi}}</span></a></li>
+            
+            
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Zaman Tüneli   <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#"></a></li>
+                <li><a href="#">Tünele Gir <span class="badge">781</span></a></li>
+                <li><a href="#">Ekşın</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Zamanlar</li>
+                <li><a href="/past">Geçmiş <span class="badge">{{gecmis.sayi}}</span></a></li>
+                <li><a href="/now">Şimdi <span class="badge">{{simdi.sayi}}</span></a></li>
+                <li><a href="/future">Gelecek <span class="badge">{{gelecek.sayi}}</span></a></li>
+                
+              </ul>
+            </li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <div class="wrapper">
+        <div class="main">
+            <br>
+           
+            <section class="current">
+                
+    
+<!-- yandaki bölüm burada -->
+<!-- yandaki bölüm burada -->
+<!-- yandaki bölüm burada -->
+<!-- yandaki bölüm burada -->
+<!-- yandaki bölüm burada -->
+<!-- yandaki bölüm burada --> 
+    
+    <div class="tab-popular">
+        {% for i in sol_entry %}
+        <article >
+            <a href="{% url "sayfa" i.id %}"><img src="/media/{{i.resim}}" class="attachment-square-thumb wp-post-image" alt="featured societies" width="140px"/></a>
+            <a class="title-category" href="http://listverse.com/category/fact-fiction/history-fact-fiction/">History</a><p><a href="{% url "sayfa" i.id %}">{{i.title|safe}}</a></h4>
+            <time datetime="2015-03-14">March 14, 2015</time>
+        </article>
+     {% endfor %}
+     <div style="margin-left:17px;">
+     <ins class="adsbygoogle"
+     style="display:inline-block;width:140px;height:150px"
+     data-ad-client="ca-pub-1772847216840979"
+     data-ad-slot="7156034645"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+        
+        <div class="ga square"> 
+        </div>
+        </div>
+</section><center>
+
+            
+{% for contact in contacts %}
+    <center><img src="/media/{{contact.resim1}}" height="422" width="422"/><br>
+    Bloqpress.com Resim Kataloğu . <br> 
+{% endfor %}
+<div class="pagination">
+    <span class="step-links">
+        {% if contacts.has_previous %}
+            <a href="?page={{ contacts.previous_page_number }}">Geri</a>
+        {% endif %}
+
+        
+            Page {{ contacts.number }} of {{ contacts.paginator.num_pages }}-
+        
+
+        {% if contacts.has_next %}
+            <a href="?page={{ contacts.next_page_number }}">İleri</a>
+        {% endif %}
+    </span>
+</div></center>
+            
+            
+            
+            
+            
+<!-- ortadaki bölüm burada -->
+<!-- ortadaki bölüm burada -->
+<!-- ortadaki bölüm burada -->
+<!-- ortadaki bölüm burada -->
+<!-- ortadaki bölüm burada -->
+<section class="new the-article" >
+<arcticle style="border-width: 0px;margin-left: 30px; font-family: TitilliumRegular, Arial, Helvetica, sans-serif; font-size: 18px; vertical-align: baseline;  padding-top: 0px; float: left; width: 599.203px; color: rgb(109, 109, 109); background-color: rgb(255, 255, 255);">
+<br><h1>{{ question.title|safe }} </h1>       
+<a href="/"<div style="border-width: 0px; font-family: TitilliumRegular, Arial, Helvetica, sans-serif; font-size: 18px; vertical-align: baseline;  padding-top: 0px; float: left; width: 590.203px; color: rgb(109, 109, 109); background-color: rgb(255, 255, 255);">
+    {{ question.short_text|safe }}
+    <div style="margin-left:0px;">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- bloqpress üst kısım -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-1772847216840979"
+     data-ad-slot="6728729041"></ins>
+    </div>
+<script>    
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script><br>
+</div></a>
+
+</arcticle>
+<center></center>       
+                
+</section>
+        </div>
+    </div>
+<div class="solbarmenu">
+     <form action="/yazilar/{{a|random}}" >{% csrf_token %}
+          <button class = "randomyeri" type="submit" class="btn btn-primary">Rastgele Yazı</button>
+          
+     </form>
+     <br>
+<br><br>
+<div class="tab-popular">
+     <div class="gelismis">
+     {% for i in resim1 %}
+     <article > 
+            <a href="{% url "sayfa" i.id %}"><img src="/media/{{ i.resim1 }}" class="attachment-square-thumb wp-post-image" alt="featured societies" width="90px" "/></a>
+     </article>
+     {% endfor %}
+     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- yankısımlar -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:89px;height:600px"
+     data-ad-client="ca-pub-1772847216840979"
+     data-ad-slot="4818017047"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div>
+
+
+
+
+
+<script type='text/javascript' src='/static/js/yeni/general.js'></script>
+<script type='text/javascript' src='/static/js/yeni/photo.js'></script>
+<script type='text/javascript' src='/static/js/yeni/jetpack.js'></script>
+<script src="http://stats.wp.com/e-201511.js" type="text/javascript"></script>
+
+		
+	
+	
+
+<script type="text/javascript" src="/static/js/yeni/yeni.js"></script>
+ <script src="/static/js/jquery.1.11.2.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/static/js/workaround.js"></script>
+
+
+
+
+	
+
+</body>
+</html>

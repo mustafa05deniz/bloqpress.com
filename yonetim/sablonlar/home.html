@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Bloqpress</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="/static/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/static/css/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/yeni/custom.css">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/theme.css" rel="stylesheet">
+    <link href="/static/css/blog.css" rel="stylesheet">
+      
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="/static/js/modes-warning.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="/static/js/jsdenemeleri.js"></script>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      
+      
+    <![endif]-->
+  </head>
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Bloqpress.com</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Ana Sayfa <span class="badge">{{pageCounter.sayi}}</span></a></li>
+            <li><a href="/about">Hakkında <span class="badge">{{hakkinda.sayi}}</span></a></li>
+            <li><a href="/contact">İletişim <span class="badge">{{iletisim.sayi}}</span></a></li>
+            
+            
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Zaman Tüneli   <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#"></a></li>
+                <li><a href="#">Tünele Gir <span class="badge">781</span></a></li>
+                <li><a href="#">Ekşın</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Zamanlar</li>
+                <li><a href="/past">Geçmiş <span class="badge">{{gecmis.sayi}}</span></a></li>
+                <li><a href="/now">Şimdi <span class="badge">{{simdi.sayi}}</span></a></li>
+                <li><a href="/future">Gelecek <span class="badge">{{gelecek.sayi}}</span></a></li>
+                
+              </ul>
+            </li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav><center><button type="button" class="btn btn-warning" id="button">Açıklama</button></center>
+    
+<div class="container"><br>
+
+
+
+
+
+
+
+
+<div class="jumbotron" id="bir">
+      
+     
+  
+        
+        
+        <div class="blog-header" >
+        <h1 class="blog-title">Bloqpress.com</h1>
+        <p class="lead blog-description">Menüde Yer alan sayılar o sayfalara ait tıklama verileridir ve en son hali ile günceldir .</p>
+      </div>
+</div>
+		
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+{% for i in entry %}
+          <div class="blog-post">
+            <h2 class="blog-post-title">{{i.title|safe}}</h2>
+            <p class="blog-post-meta">Tarih ve Saat  <a href="#">Kim Tarafından</a></p>
+            {{ i.short_text|safe}}
+            
+          </div><!-- /.blog-post -->
+{% endfor %}
+          
+
+          
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Archives</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">March 2014</a></li>
+              <li><a href="#">February 2014</a></li>
+              <li><a href="#">January 2014</a></li>
+              <li><a href="#">December 2013</a></li>
+              <li><a href="#">November 2013</a></li>
+              <li><a href="#">October 2013</a></li>
+              <li><a href="#">September 2013</a></li>
+              <li><a href="#">August 2013</a></li>
+              <li><a href="#">July 2013</a></li>
+              <li><a href="#">June 2013</a></li>
+              <li><a href="#">May 2013</a></li>
+              <li><a href="#">April 2013</a></li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+        
+        <br>
+      <!-- Alt menüler Haber Geçişleri gibi birşey  -->
+        <div class="col-sm-4">
+            
+          <div class="list-group">
+            <a href="#" class="list-group-item active">
+              <h4 class="list-group-item-heading">Günce</h4>
+              <p class="list-group-item-text">Ülkemizden ve dünyadan Günceler</p>
+            </a>
+            {% for i in rapor %}
+            
+            <a href="#" class="list-group-item">
+              <h4 class="list-group-item-heading">{{ i.title }}</h4>
+              <p class="list-group-item-text">{{ i.text }}</p>
+            </a>
+            {% endfor %}
+            
+          </div>
+          
+        </div>
+      <!-- Alt menüler Haber Geçişleri gibi birşey  -->
+        <!-- Alt menüler Haber Geçişleri gibi birşey  -->
+        <div class="col-sm-4">
+            
+          <div class="list-group">
+            <a href="#" class="list-group-item active">
+              <h4 class="list-group-item-heading">Hayat</h4>
+              <p class="list-group-item-text">Hayattan bilgiler ve kısaslar</p>
+            </a>
+            {% for i in entry %}
+            
+            <a href="/{{i.url}}" class="list-group-item">
+              <h4 class="list-group-item-heading">{{ i.title }}</h4>
+              <p class="list-group-item-text">{{ i.text }}</p>
+            </a>
+            {% endfor %}
+            
+          </div>
+          
+        </div>
+      <!-- Alt menüler Haber Geçişleri gibi birşey  -->
+        <!-- Alt menüler Haber Geçişleri gibi birşey  -->
+        <div class="col-sm-4">
+            
+          <div class="list-group">
+            <a href="#" class="list-group-item active">
+              <h4 class="list-group-item-heading">Sizden Gelenler</h4>
+              <p class="list-group-item-text">Sizden Gelenlerin  Toplandığı bölüm</p>
+            </a>
+            {% for i in rapor %}
+            
+            <a href="#" class="list-group-item">
+              <h4 class="list-group-item-heading">{{ i.title }}</h4>
+              <p class="list-group-item-text">{{ i.text }}</p>
+            </a>
+            {% endfor %}
+            
+          </div>
+          
+        </div>
+      <!-- Alt menüler Haber Geçişleri gibi birşey  -->
+
+        
+        
+    </div> <!-- /container -->
+      
+    <section id="portfolio" class="element_from_bottom">
+    <div class="container-full">
+        <div class="container">
+            <div class="portfolio-img">
+                <ul id="Grid">
+                    <li class="mix uygulamalar website">
+                        <figure>
+                            <img width="262" height="206" src="http://www.abdullahbac.com/wp-content/uploads/2015/02/1.jpg" class="attachment-post-thumbnail wp-post-image" alt="1" />
+                            <figcaption><h4>Telefon Programcılığı</h4></figcaption>
+                        </figure>
+                    </li>
+                    <li class="mix fotografcilik">
+                        <figure>
+                            <img width="252" height="198" src="http://www.abdullahbac.com/wp-content/uploads/2015/02/8.jpg" class="attachment-post-thumbnail wp-post-image" alt="8" />										<figcaption>
+                            <h4>Kalp..</h4>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="mix fotografcilik">
+                        <figure>
+                            <img width="252" height="198" src="http://www.abdullahbac.com/wp-content/uploads/2015/02/9.jpg" class="attachment-post-thumbnail wp-post-image" alt="9" />										<figcaption>
+                            <h4>Hediyeler..</h4>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="mix fotografcilik">
+                        <figure>
+                            <img width="252" height="198" src="http://www.abdullahbac.com/wp-content/uploads/2015/02/7.jpg" class="attachment-post-thumbnail wp-post-image" alt="7" />										<figcaption>
+                            <h4>İlham ve Lezzet</h4>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="mix fotografcilik website">
+                        <figure>
+                            <img width="262" height="199" src="http://www.abdullahbac.com/wp-content/uploads/2014/02/resized_keys2.jpg" class="attachment-post-thumbnail wp-post-image" alt="resized_keys2" />										<figcaption>
+                            <h4>Keys..</h4>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="mix website">
+                        <figure>
+                            <img width="512" height="386" src="http://www.abdullahbac.com/wp-content/uploads/2014/02/HTML.jpg" class="attachment-post-thumbnail wp-post-image" alt="HTML" />										<figcaption>
+                            <h4>Html</h4>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="mix uygulamalar">
+                        <figure>
+                            <img width="262" height="199" src="http://www.abdullahbac.com/wp-content/uploads/2014/02/123321.jpg" class="attachment-post-thumbnail wp-post-image" alt="123321" />										<figcaption>
+                            <h4>Uygulamalar..</h4>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    
+                </ul> <!-- /#Grid -->
+            </div> <!-- /.portfolio-img -->
+        </div> <!-- /.container -->
+        <div class="clear-bottom"></div>
+    </div> <!-- /.container-full -->
+</section><!-- #portfolio --><br>
+
+
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/js/jquery.1.11.2.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/static/js/workaround.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/static/js/yeni/mixitup.min.js"></script>
+    <script src="/static/js/yeni/custom.js"></script>
+  </body>
+</html>
